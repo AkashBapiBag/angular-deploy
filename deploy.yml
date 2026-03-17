@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 25
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo "Deploying Angular application..."
+      - pwd
+      - aws s3 rm s3://demo.akashkeycloak.shop --recursive
+      - aws s3 sync . s3://demo.akashkeycloak.shop
+  post_build:
+    commands:
+      - echo Build completed on `date`

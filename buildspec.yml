@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 25
+    commands:
+      - npm install -g @angular/cli
+      - npm install
+  build:
+    commands:
+      - ng build --configuration production
+      - ls -lrat
+      - cp deploy.yml dist/akashkeycloakshop/browser/
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: dist/akashkeycloakshop/browser
