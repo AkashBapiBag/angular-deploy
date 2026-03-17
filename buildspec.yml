@@ -13,9 +13,9 @@ phases:
     commands:
       - ng build --configuration production
       - ls -lrat
-      - cp deploy.yml dist/akashkeycloakshop/browser/
+      - cp deploy.yml dist/angular-deploy/browser/
 
 artifacts:
   files:
     - '**/*'
-  base-directory: dist/akashkeycloakshop/browser
+  base-directory: dist/angular-deploy/browser
