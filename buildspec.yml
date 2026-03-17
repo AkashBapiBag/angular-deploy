@@ -5,6 +5,8 @@ phases:
     runtime-versions:
       nodejs: 25
     commands:
+      - node -v
+      - npm -v
       - npm install -g @angular/cli
       - npm install
   build:
